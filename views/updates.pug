@@ -1,0 +1,46 @@
+html
+  head 
+    title= `${title}`
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body    
+    h1= data ? 'Update Favorite Anime' : 'Add Favorite Anime'
+    a(href="/", class="link") Return to the Homepage
+
+    form(action= data ? `/update-cobj/${data.properties.hs_object_id}` : "/update-cobj", method="POST")
+      table
+        tbody
+          tr
+            td
+              label(for="name_") Name:
+                span.required *
+            td
+              input(
+                type="text", 
+                name="name", 
+                required, 
+                class="rounded-input", 
+                value= data ? data.properties.name : ''
+              )
+          tr
+            td
+              label(for="favorite_character") Favorite Character:
+                span.required *
+            td
+              input(
+                type="text", 
+                name="favorite_character", 
+                required, 
+                class="rounded-input", 
+                value= data ? data.properties.favorite_character : ''
+              )
+          tr
+            td
+              label(for="description_") Description:
+            td
+              textarea(
+                name="description", 
+                id="description", 
+                class="rounded-input"
+              )= data ? data.properties.description : ''
+      button(type="submit", class="rounded-button")= data ? 'Update' : 'Add'
