@@ -10,6 +10,11 @@ h1 {
     margin: 16px;
 }
 
+h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
 .cards {
     display: flex;
     align-items: center;
