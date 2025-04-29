@@ -7,7 +7,7 @@ body, * {
 }
 
 h1 {
-    margin: 1rem;
+    margin: 16px;
 }
 
 .cards {
@@ -31,7 +31,7 @@ h1 {
 }
 
 .form-wrapper {
-    font-size: 18px;
+    font-size: 16px;
     max-width: 768px;
     margin: 2rem auto;
     padding: 2rem;
@@ -41,7 +41,7 @@ h1 {
 }
 
 label, input {
-    margin-top: 5px;
+    margin-top: 8px;
     display: block;
     font-size: inherit;
 }
@@ -51,8 +51,8 @@ input[type="text"] {
 }
 
 input[type="submit"] {
-    background-color: lightgrey;
+    background-color: #F2F2F2;
     border: none;
     padding: .375rem 1rem;
-    margin-top: 10px;
+    margin-top: 15px;
 }
